@@ -18,6 +18,11 @@
  */
 function addUpArrayElements(arr) {
   // write your code here & return value
+  let total = 0;
+  arr.forEach((num) => {
+    total += num;
+  });
+  return total;
 }
 
 /**
@@ -29,6 +34,7 @@ function addUpArrayElements(arr) {
  */
 function makeSquareNumbers(arr) {
   // write your code here & return value
+  return arr.map((num) => num * num);
 }
 
 /**
@@ -43,6 +49,7 @@ function makeSquareNumbers(arr) {
  */
 function filterForLargeWords(arr, length) {
   // write your code here & return value
+  return arr.filter((word) => word.length > length);
 }
 
 /**
@@ -54,6 +61,7 @@ function filterForLargeWords(arr, length) {
  */
 function findTheFirstEvenNumber(arr) {
   // write your code here & return value
+  return arr.find((num) => num % 2 === 0);
 }
 
 /**
@@ -66,6 +74,9 @@ function findTheFirstEvenNumber(arr) {
  */
 function sortCaseSensitive(arr) {
   // write your code here & return value
+  const newarr = [...arr];
+  newarr.sort();
+  return newarr;
 }
 
 /**
@@ -79,6 +90,7 @@ function sortCaseSensitive(arr) {
  */
 function makeTheString(arr, separator) {
   // write your code here & return value
+  return arr.join(separator);
 }
 
 /**
@@ -91,6 +103,9 @@ function makeTheString(arr, separator) {
  */
 function reverseTheArray(arr) {
   // write your code here & return value
+  const newarr = [...arr];
+  newarr.reverse();
+  return newarr;
 }
 
 /**
@@ -103,6 +118,11 @@ function reverseTheArray(arr) {
  */
 function makeMirrorArray(arr) {
   // write your code here & return value
+  const newarr = [...arr];
+  const revarr = [...arr];
+  revarr.reverse();
+  newarr.pop();
+  return newarr.concat(revarr);
 }
 
 /**
@@ -116,6 +136,7 @@ function makeMirrorArray(arr) {
  */
 function dropRight(arr, n) {
   // write your code here & return value
+  return arr.slice(0, -n);
 }
 
 /**
@@ -129,6 +150,7 @@ function dropRight(arr, n) {
  */
 function dropLeft(arr, n) {
   // write your code here & return value
+  return arr.slice(n);
 }
 
 /**
@@ -142,6 +164,7 @@ function dropLeft(arr, n) {
  */
 function checkArrayForValue(arr, val) {
   // write your code here & return value
+  return arr.includes(val);
 }
 
 module.exports = {

@@ -17,6 +17,11 @@
  */
 function getAbsoluteSum(nums) {
   // write your code here & return value
+  let total = 0;
+  nums.forEach((num) => {
+    total += Math.abs(num);
+  });
+  return total;
 }
 
 /**
@@ -28,6 +33,7 @@ function getAbsoluteSum(nums) {
  */
 function removeStrings(arr) {
   // write your code here & return value
+  return arr.filter((element) => typeof element !== 'string');
 }
 
 /**
@@ -50,6 +56,9 @@ function removeStrings(arr) {
  */
 function findMinMax(arr) {
   // write your code here & return value
+  const min = Math.min(...arr);
+  const max = Math.max(...arr);
+  return [min, max];
 }
 
 /**
@@ -74,6 +83,12 @@ function findMinMax(arr) {
  */
 function getTelNo(numbers) {
   // write your code here & return value
+  const telno = [...numbers];
+  telno.splice(0, 0, '(');
+  telno.splice(4, 0, ') ');
+  telno.splice(8, 0, '-');
+  const str = telno.join('');
+  return str;
 }
 
 /**
@@ -120,6 +135,18 @@ function getTelNo(numbers) {
  */
 function getUnmatchedInteger(numbers) {
   // write your code here & return value
+  const newnumbers = [...numbers];
+  let num;
+  while (newnumbers.length > 0) {
+    num = newnumbers.pop();
+    const index = newnumbers.indexOf(num * -1);
+    if (index !== -1) {
+      newnumbers.splice(index, 1);
+    } else {
+      break;
+    }
+  }
+  return num;
 }
 
 module.exports = {

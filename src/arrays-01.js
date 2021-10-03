@@ -25,6 +25,7 @@
  */
 function getFirstValue(arr) {
   // write your code here & return value
+  return arr[0];
 }
 
 /**
@@ -37,6 +38,8 @@ function getFirstValue(arr) {
  */
 function makeArray(a, b, c, d) {
   // write your code here & return value
+  let array = [a, b, c, d];
+  return array;
 }
 
 /**
@@ -47,7 +50,8 @@ function makeArray(a, b, c, d) {
  *
  */
 function createFirstFivePrimes() {
-  // write your code here & return value
+  let array = [2, 3, 5, 7, 11];
+  return array;
 }
 /**
  * Creates a new array with a number of elements
@@ -58,7 +62,12 @@ function createFirstFivePrimes() {
  * ? must use a for loop
  */
 function createSizedArray(size) {
-  // write your code here & return value
+  const numberList = [];
+  let newsize = size - 1;
+  for (let indexofSize = 0; indexofSize <= newsize; indexofSize++) {
+    numberList[indexofSize] = indexofSize;
+  }
+  return numberList;
 }
 
 /**
@@ -70,6 +79,9 @@ function createSizedArray(size) {
  */
 function modifyArrayByAdding(arr) {
   // write your code here & return value
+  arr.unshift(1);
+  arr.push(1);
+  return arr;
 }
 
 /**
@@ -80,6 +92,9 @@ function modifyArrayByAdding(arr) {
  */
 function modifyArrayByDeleting(arr) {
   // write your code here & return value
+  arr.shift();
+  arr.pop();
+  return arr;
 }
 
 /**
@@ -91,6 +106,7 @@ function modifyArrayByDeleting(arr) {
  */
 function findElementAtIndex(arr, index) {
   // write your code here & return value
+  return arr[index];
 }
 
 /**
@@ -102,7 +118,7 @@ function findElementAtIndex(arr, index) {
  * ? hint: https://bit.ly/2ZyFaAj - Array Searching and Sorting Methods
  */
 function findElementByValue(arr, value) {
-  // write your code here & return value
+  return arr.indexOf(value);
 }
 
 /**
@@ -115,6 +131,8 @@ function findElementByValue(arr, value) {
  */
 function changeElementAtIndex(arr, index, value) {
   // write your code here & return value
+  arr[index] = value;
+  return arr;
 }
 
 /**
@@ -126,6 +144,7 @@ function changeElementAtIndex(arr, index, value) {
  */
 function makeStringFromArray(arr) {
   // write your code here & return value
+  return arr.join('');
 }
 
 /**
@@ -137,6 +156,8 @@ function makeStringFromArray(arr) {
  */
 function createShallowCopy(arr) {
   // write your code here & return value
+  let copy = [...arr];
+  return copy;
 }
 
 module.exports = {
